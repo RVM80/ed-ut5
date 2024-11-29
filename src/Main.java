@@ -23,7 +23,8 @@ public class Main {
         System.out.println("3. Calcular la potencia de un número");
         System.out.println("4. Dividir dos números");
         System.out.println("5. Calcular el factorial de un número");
-        System.out.println("6. Salir");
+        System.out.println("6. Calcular la multiplicación de dos  números");
+        System.out.println("7. Salir");
         System.out.print("Opción: ");
     }
 
@@ -45,6 +46,9 @@ public class Main {
                 System.out.println("Resultado: " + calcularFactorial(scanner));
                 break;
             case 6:
+                System.out.println("Resultado: " + calcularMultiplicación(scanner));
+                break;
+            case 7:
                 break;
             default:
                 System.out.println("Opción no válida. Intente nuevamente.");
@@ -100,5 +104,13 @@ public class Main {
             factorial *= i;
         }
         return factorial;
+    }
+
+    private static int calcularMultiplicación(Scanner scanner) {
+        System.out.print("Ingrese el primer número: ");
+        int a = scanner.nextInt();
+        System.out.print("Ingrese el segundo número: ");
+        int b = scanner.nextInt();
+        return a * b;
     }
 }
